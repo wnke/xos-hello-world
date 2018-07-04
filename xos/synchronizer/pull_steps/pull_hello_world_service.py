@@ -12,6 +12,11 @@ class HelloWorldServiceInstancePullStep(PullStep):
 
     def pull_records(self):
         log.info("pulling HelloWorldServiceInstance")
+
+        if HelloWorldServiceInstance.objects.filter(name="Pulled Record", hello_to="Dude"):
+            log.info("Nothing new to pull!")
+            return
+
         # create an empty model
         o = HelloWorldServiceInstance()
         # code to fetch information
@@ -19,4 +24,5 @@ class HelloWorldServiceInstancePullStep(PullStep):
         o.hello_to = "Dude"
         o.name = "Pulled Record"
         o.no_sync = True # this is required to prevent the synchronizer to be invoked and start a loop
+        log.info("Pulled one record!")
         o.save()
