@@ -1,5 +1,8 @@
+from xosconfig import Config
+from multistructlog import create_logger
 from synchronizers.new_base.policy import Policy
 
+log = create_logger(Config().get('logging'))
 
 class HelloWordServiceInstancePolicy(Policy):
     model_name = "HelloWorldServiceInstance"
