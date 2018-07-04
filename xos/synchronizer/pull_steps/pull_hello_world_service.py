@@ -16,6 +16,7 @@ class HelloWorldServiceInstancePullStep(PullStep):
         o = HelloWorldServiceInstance()
         # code to fetch information
         # populate the model
-        o.hello_to = "Pulled record"
+        o.hello_to = "Dude"
+        o.name = "Pulled Record"
         o.no_sync = True # this is required to prevent the synchronizer to be invoked and start a loop
         o.save()
