@@ -20,7 +20,19 @@ topology_template:
       properties:
         name: HelloWorld Service Instance
         hello_to: Daenerys Targaryen
-
+    
+    serviceinstance1:
+      type: tosca.nodes.HelloWorldServiceInstance
+      properties:
+        name: HelloWorld Service Instance 1
+        hello_to: Tyrion Lannister
+    
+    serviceinstance2:
+      type: tosca.nodes.HelloWorldServiceInstance
+      properties:
+        name: HelloWorld Service Instance 2
+        hello_to: Joffrey Baratheon
+    
     constraints:
       type: tosca.nodes.ServiceGraphConstraint
       properties:
