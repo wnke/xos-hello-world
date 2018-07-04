@@ -1,0 +1,18 @@
+name: hello-world
+required_models:
+  - HelloWorldService
+  - HelloWorldServiceInstance
+models_dir: "/opt/xos/synchronizers/hello-world/models"
+steps_dir: "/opt/xos/synchronizers/hello-world/steps"
+#pull_steps_dir: "/opt/xos/synchronizers/hello-world/pull_steps"
+#event_steps_dir: "/opt/xos/synchronizers/hello-world/event_steps"
+logging:
+  version: 1
+  handlers:
+    console:
+      class: logging.StreamHandler
+  loggers:
+    'multistructlog':
+      handlers:
+          - console
+      level: DEBUG
