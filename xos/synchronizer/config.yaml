@@ -1,4 +1,8 @@
 name: hello-world
+accessor:
+  username: admin@opencord.org
+  password: letmein
+  endpoint: xos-core:50051
 required_models:
   - HelloWorldService
   - HelloWorldServiceInstance
