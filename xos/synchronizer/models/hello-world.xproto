@@ -1,5 +1,5 @@
 option name = "hello-world";
-option app_name = "hello-world";
+option app_label = "hello-world";
 
 message HelloWorldService (Service){
     required string hello_from = 1 [help_text = "The name of who is saying hello", null = False, db_index = False, blank = False];
@@ -7,5 +7,5 @@ message HelloWorldService (Service){
 
 message HelloWorldServiceInstance (ServiceInstance){
     option owner_class_name="HelloWorldService";
-    required string hello_to = 1 [help_text = "The name of who is being greeted", null = False, db_index = False, blank = False];   
+    required string hello_to = 1 [help_text = "The name of who is being greeted", null = False, db_index = False, blank = False];
 }
