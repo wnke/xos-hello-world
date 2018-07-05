@@ -1,6 +1,5 @@
 tosca_definitions_version: tosca_simple_yaml_1_0
 imports:
-  - custom_types/helloworldservice.yaml
   - custom_types/helloworldserviceinstance.yaml
   - custom_types/servicegraphconstraint.yaml
 
@@ -8,19 +7,19 @@ description: Create an instance of HelloWorldService and one of HelloWorldServic
 
 topology_template:
   node_templates:
-
-    service:
-      type: tosca.nodes.HelloWorldService
-      properties:
-        name: HelloWorld
-        hello_from: Jhon Snow
-
-    serviceinstance:
+    
+    serviceinstance1:
       type: tosca.nodes.HelloWorldServiceInstance
       properties:
-        name: HelloWorld Service Instance
-        hello_to: Daenerys Targaryen
-        
+        name: HelloWorld Service Instance 1
+        hello_to: Tyrion Lannister
+    
+    serviceinstance2:
+      type: tosca.nodes.HelloWorldServiceInstance
+      properties:
+        name: HelloWorld Service Instance 2
+        hello_to: Joffrey Baratheon
+    
     constraints:
       type: tosca.nodes.ServiceGraphConstraint
       properties:
