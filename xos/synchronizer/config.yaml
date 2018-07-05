@@ -10,7 +10,10 @@ models_dir: "/opt/xos/synchronizers/hello-world/models"
 model_policies_dir: "/opt/xos/synchronizers/hello-world/model_policies"
 steps_dir: "/opt/xos/synchronizers/hello-world/steps"
 pull_steps_dir: "/opt/xos/synchronizers/hello-world/pull_steps"
-#event_steps_dir: "/opt/xos/synchronizers/hello-world/event_steps"
+event_steps_dir: "/opt/xos/synchronizers/hello-world/event_steps"
+event_bus:
+  endpoint: cord-kafka
+  kind: kafka
 logging:
   version: 1
   handlers:
