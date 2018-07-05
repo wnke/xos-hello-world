@@ -12,7 +12,7 @@ steps_dir: "/opt/xos/synchronizers/hello-world/steps"
 pull_steps_dir: "/opt/xos/synchronizers/hello-world/pull_steps"
 event_steps_dir: "/opt/xos/synchronizers/hello-world/event_steps"
 event_bus:
-  endpoint: cord-kafka
+  endpoint: voltha-kafka # Using VOLTHA kafka instead of creating a new pod
   kind: kafka
 logging:
   version: 1
